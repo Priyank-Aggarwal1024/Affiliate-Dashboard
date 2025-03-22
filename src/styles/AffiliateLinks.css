@@ -1,0 +1,273 @@
+.affiliate-links {
+  width: 100%;
+  padding: 29px 16px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+  min-height: 100%;
+}
+.affiliate-links-courses {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.affiliate-links-course {
+  display: flex;
+  padding: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  border-radius: 13.373px;
+  border-bottom: 1.114px solid #eee;
+  background: rgba(86, 88, 85, 0.05);
+}
+
+.affiliate-links-course-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+.affiliate-lct-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+.affiliate-lct-img {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+}
+.affiliate-lctl-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.affiliate-lctl-detail {
+  width: calc(100% - 90px);
+}
+.affiliate-lctl-price-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.affiliate-lctl-price {
+  color: #8c008c;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 89.866%; /* 89.866% */
+}
+.affiliate-lctl-name {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 97.508% */
+}
+.affiliate-lct-right {
+  display: flex;
+  height: 35px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1 0 0; */
+  border-radius: 1882.916px;
+  border: 0.941px solid rgba(30, 123, 16, 0.56);
+  background: rgba(73, 208, 67, 0.13);
+  color: #10a409;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 123%; /* 123.566% */
+  width: fit-content;
+}
+
+.affiliate-links-course-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.affiliate-lcm--head {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 262.5% */
+}
+.affiliate-lcm-box {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 54px;
+  flex-shrink: 0;
+  width: 100%;
+  gap: 17px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  background: #fff;
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 23.04px */
+  max-width: 100%;
+}
+.affiliate-lcm-box p {
+  opacity: 0.7;
+  /* word-break: break-all; */
+}
+.affiliate-links-course-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+.affiliate-lcb-cardref,
+.affiliate-lcb-cardearn {
+  display: flex;
+  padding: 12px 16px;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(145, 33, 145, 0.19);
+  background: #fff;
+  box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.07);
+  justify-content: space-between;
+}
+.affiliate-lcb-card-title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 206.946% */
+  opacity: 0.6;
+}
+.affiliate-lcb-card-no {
+  color: #800080;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 90.304% */
+}
+
+@media (width<1280px) {
+  .affiliate-links-course {
+    padding: 20px;
+  }
+  .affiliate-links-courses {
+    grid-template-columns: 1fr;
+  }
+}
+@media (width<1024px) {
+}
+@media (width<780px) {
+  .affiliate-links {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+  .affiliate-links-course {
+    gap: 12px;
+  }
+  .affiliate-lctl-name {
+    font-size: 21px;
+  }
+  .affiliate-lctl-price {
+    font-size: 19px;
+  }
+  .affiliate-lcm-box,
+  .affiliate-lcb-card-title {
+    font-size: 15px;
+  }
+  .affiliate-lct-right {
+    font-size: 13px;
+    height: unset;
+  }
+  .affiliate-lcb-card-no {
+    font-size: 26px;
+  }
+  .affiliate-links-course-bottom {
+    gap: 12px;
+  }
+  .affiliate-lcb-cardref,
+  .affiliate-lcb-cardearn {
+    border-radius: 14px;
+  }
+  .affiliate-lct-left {
+    gap: 18px;
+  }
+  .affiliate-lct-img {
+    width: 55px;
+    height: 55px;
+  }
+  .affiliate-links-course-middle {
+    gap: 5px;
+  }
+}
+@media (width<580px) {
+  .affiliate-links {
+    padding: 10px 8px;
+    border-radius: 12px;
+  }
+  .affiliate-lctl-detail {
+    width: calc(100% - 58px);
+    gap: 5px;
+  }
+  .affiliate-lctl-name {
+    font-size: 18px;
+  }
+  .affiliate-lctl-price {
+    font-size: 16px;
+  }
+  .affiliate-lcm-box,
+  .affiliate-lcb-card-title {
+    font-size: 14px;
+  }
+  .affiliate-lct-right {
+    font-size: 12px;
+  }
+  .affiliate-lcb-card-no {
+    font-size: 22px;
+  }
+  .affiliate-lct-img {
+    width: 40px;
+    height: 40px;
+  }
+  .affiliate-links-course {
+    padding: 16px;
+  }
+  .affiliate-lcm-box {
+    padding: 6px 8px;
+    gap: 12px;
+  }
+  .affiliate-lcb-cardref,
+  .affiliate-lcb-cardearn {
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+}
+@media (width<400px) {
+  .affiliate-lcm-box p {
+    word-break: break-all;
+  }
+}
