@@ -1,11 +1,58 @@
 import { useState } from "react";
 // import avatar from "../assets/avatar.svg";
+import calendar from "../assets/calendar.svg";
 
 function AffiliateDashboardOverview({ affiliateUser, affiliateCoursesData }) {
   const [tab, setTab] = useState(0);
+  const [month, setMonth] = useState("March");
+  const [selectOpen, setSelectOpen] = useState(false);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   return (
     <>
+      <div className="affiliate-dmb-month">
+        <div
+          className="affiliate-dmb-month-inner"
+          onClick={() => setSelectOpen(!selectOpen)}
+        >
+          <img src={calendar} alt="Calendar" />
+          <p>{month}</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M5.41 7L10 11.3302L14.59 7L16 8.33962L10 14L4 8.33962L5.41 7Z"
+              fill="#902190"
+            />
+          </svg>
+          {selectOpen && (
+            <div className="affiliate-dmb-month-selects">
+              {months.map((m) => (
+                <p key={m} onClick={() => setMonth(m)}>
+                  {m}
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
       <div className="affiliate-dmb-stats-outer">
         <div className="affiliate-dmb-stats">
           <div className="affiliate-dmb-stats-card">
