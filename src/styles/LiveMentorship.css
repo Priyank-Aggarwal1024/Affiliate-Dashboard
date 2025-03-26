@@ -1,0 +1,197 @@
+.live-mentorship {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: blowing 300ms ease 1 forwards;
+}
+.live-mentorship-main {
+  display: flex;
+  width: 100%;
+  max-width: 407px;
+  padding: 17.017px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 13px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 9.927px;
+  background: #fff;
+  box-shadow: 0px 5.672px 24.959px 0px rgba(0, 0, 0, 0.14);
+}
+.live-mentorship-top,
+.live-mentorship-middle,
+.live-mentorship-middle2,
+.live-mentorship-bottom {
+  width: 100%;
+}
+.live-mentorship-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.live-mentorship-middle {
+  color: rgba(128, 0, 128, 0.92);
+  font-family: Poppins;
+  font-size: 19.854px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  opacity: 0.7;
+}
+.live-mentorship-middle2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12.763px;
+  flex-shrink: 0;
+}
+.live-mentorship-middle2-cont {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.live-mentorship-middle2-cont > span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 17.017px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.7;
+}
+.live-mentorship-top-left {
+  display: flex;
+  align-items: center;
+  gap: 5.672px;
+  color: #1b1b1d;
+  font-family: Poppins;
+  font-size: 25.526px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 138.889% */
+}
+.live-mentorship-top-right-new {
+  display: flex;
+  height: 26.944px;
+  padding: 0px 12.719px 0px 14.187px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4.254px;
+  background: #49d043;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 19.854px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.live-mentorship-bottom {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  padding: 13.704px;
+  justify-content: center;
+  align-items: center;
+  gap: 27.409px;
+  flex-shrink: 0;
+  border-radius: 6.776px;
+  background: #60606268;
+  box-shadow: 0px 0px 14.748px 0px rgba(0, 0, 0, 0.17);
+  color: #83848d;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17.017px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 123.5%; /* 21.017px */
+  cursor: pointer;
+}
+.live-mentorship-bottom.active {
+  background: #800080;
+  box-shadow: 0px 0px 14.748px 0px rgba(0, 0, 0, 0.17);
+  color: #fff;
+}
+@keyframes blowing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (width < 780px) {
+  .live-mentorship-middle {
+    font-size: 16.5px;
+  }
+  .live-mentorship-top-left {
+    font-size: 22px;
+  }
+  .live-mentorship-middle2-cont > span {
+    font-size: 15px;
+  }
+  .live-mentorship-bottom {
+    font-size: 15px;
+  }
+}
+@media (width < 580px) {
+  .live-mentorship-middle {
+    font-size: 14px;
+  }
+  .live-mentorship-top-left {
+    font-size: 18px;
+  }
+  .live-mentorship-middle2-cont > span {
+    font-size: 12px;
+  }
+  .live-mentorship-bottom {
+    font-size: 12px;
+  }
+  .live-mentorship-top-left > svg {
+    width: 25px;
+    height: 25px;
+  }
+  .live-mentorship-top-right-new {
+    width: 50px;
+    height: 18.605px;
+    border-radius: 3.488px;
+    border: 1.163px solid #fff;
+    background: #49d043;
+    font-size: 13.953px;
+  }
+  .live-mentorship-main {
+    display: flex;
+    max-width: 297px;
+    width: 100%;
+    padding: 12px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 13px 80px;
+    flex-wrap: wrap;
+  }
+  .live-mentorship-bottom {
+    height: 35px;
+    width: fit-content;
+    padding: 9.664px;
+    border-radius: 4.778px;
+    box-shadow: 0px 0px 10.4px 0px rgba(0, 0, 0, 0.17);
+  }
+  .live-mentorship-middle2-cont > svg {
+    width: 15px;
+    height: 7.778px;
+    aspect-ratio: 15/7.78;
+  }
+  .live-mentorship-middle2 {
+    gap: 9px;
+  }
+}

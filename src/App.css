@@ -1,0 +1,32 @@
+.chat-with-mentor-container {
+  position: fixed;
+  bottom: 21px;
+  right: 21px;
+  z-index: 10000;
+}
+.chat-with-mentor-container-inner {
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+  width: 100%;
+}
+@media (width < 580px) {
+  .chat-with-mentor-container {
+    bottom: 0;
+    padding: 8px;
+    padding-top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .chat-with-mentor-container-inner {
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+@media (width < 360px) {
+  .chat-with-mentor-container {
+    padding: 4px;
+  }
+}
