@@ -79,7 +79,10 @@ function LiveMentorship({ available, setShowMentorship }) {
             <span>Screen Share Support</span>
           </div>
         </div>
-        <div className={`live-mentorship-bottom ${available ? "active" : ""}`}>
+        <div
+          className={`live-mentorship-bottom ${available ? "active" : ""}`}
+          id="connect-with-mentor"
+        >
           Connect with Mentor
         </div>
       </div>

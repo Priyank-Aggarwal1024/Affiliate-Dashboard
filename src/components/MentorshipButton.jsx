@@ -1,7 +1,11 @@
 import "../styles/MentorshipButton.css";
 function MentorshipButton({ available, onClick, icon, text }) {
   return (
-    <div className="mentorship-button " onClick={onClick}>
+    <div
+      className="mentorship-button "
+      onClick={onClick}
+      id="live-1-1-mentorship"
+    >
       <div
         className={`mentorship-button-active ${available && "active"}`}
       ></div>
