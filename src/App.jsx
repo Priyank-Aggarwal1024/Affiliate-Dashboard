@@ -6,6 +6,8 @@ import LiveMentorship from "./components/LiveMentorship";
 import ChatIcon from "./assets/chat.svg";
 import MentorIcon from "./assets/mentor.svg";
 import ChatWithMentor from "./components/ChatWithMentor";
+import { Route, Routes } from "react-router-dom";
+import Shimmer from "./pages/Shimmer/Shimmer";
 function App() {
   const [available, setAvailable] = useState(false);
   const [showMentorship, setShowMentorship] = useState(false);
@@ -50,7 +52,10 @@ function App() {
           available={available}
         />
       )}
-      <AffiliateDashboard />
+      <Routes>
+        <Route path="/" element={<AffiliateDashboard />} />
+        <Route path="/shimmer" element={<Shimmer />} />
+      </Routes>
     </>
   );
 }

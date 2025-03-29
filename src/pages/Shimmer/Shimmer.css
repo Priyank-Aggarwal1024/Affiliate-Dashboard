@@ -1,0 +1,1774 @@
+@keyframes shimmer {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+/* Base Styles */
+.shimmer-text {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  margin: 0;
+  background: linear-gradient(to right, #eaeaea 0%, #f5f5f5 50%, #eaeaea 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 1.4s infinite linear;
+  z-index: 1;
+  transform: skewX(-20deg);
+  opacity: 1;
+}
+
+/* Layout Classes */
+.shimmer-section {
+  padding: 64px 96px;
+}
+
+.compact-section {
+  padding: 32px 24px;
+}
+
+.shimmer-container {
+  width: 100vw;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Navbar Styles */
+.shimmer-navbar {
+  width: 100%;
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 96px;
+}
+
+.shimmer-navbar-right-item {
+  width: 130px;
+  height: 45px;
+}
+
+/* Hero Section */
+.shimmer-hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.shimmer-hero-left,
+.shimmer-hero-right {
+  width: 100%;
+  height: 100%;
+}
+
+.shimmer-hero-right {
+  height: 480px;
+}
+
+.shimmer-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.shimmer-hero-left-item1 {
+  width: 60%;
+  height: 56px;
+}
+
+.shimmer-hero-left-item2 {
+  width: 100%;
+  height: 200px;
+}
+
+.shimmer-hero-left-item3 {
+  width: 100%;
+  height: 30px;
+}
+
+.shimmer-hero-left-item4 {
+  display: flex;
+  gap: 16px;
+}
+
+.shimmer-hero-left-item4-item1,
+.shimmer-hero-left-item4-item2 {
+  width: 100%;
+  height: 100px;
+}
+
+.shimmer-hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 0 96px;
+  height: 190px;
+}
+
+/* Courses Section */
+.shimmer-courses {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.shimmer-courses-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-courses-title {
+  width: 300px;
+  height: 48px;
+}
+
+.shimmer-courses-subtitle {
+  width: 600px;
+  height: 24px;
+}
+
+.shimmer-courses-filters {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.shimmer-filter-pill {
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+}
+
+.shimmer-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 0 16px;
+  max-width: 1021px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.shimmer-course-card {
+  aspect-ratio: 1;
+  border-radius: 24px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid #f5f5f5;
+}
+
+.shimmer-course-image {
+  width: 100%;
+  height: 65%;
+  border-radius: 0;
+  margin-bottom: auto;
+}
+
+.shimmer-course-title {
+  width: 100%;
+  height: 40px;
+  margin-top: auto;
+}
+
+/* Combo Pack Section */
+.shimmer-combo-pack {
+  width: 100%;
+  background: linear-gradient(135deg, #5e0074 0%, #3b0047 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-combo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.shimmer-combo-title {
+  width: 500px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.shimmer-combo-grid {
+  display: flex;
+  gap: 20px;
+  padding: 8px 4px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.shimmer-combo-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.shimmer-combo-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  min-height: 420px;
+}
+
+.shimmer-combo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.shimmer-combo-card-title {
+  height: 32px;
+  width: 80%;
+}
+
+.shimmer-combo-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: auto;
+}
+
+.shimmer-skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shimmer-skill-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.shimmer-skill-text {
+  height: 20px;
+  width: calc(100% - 40px);
+}
+
+.shimmer-combo-validity {
+  height: 24px;
+  width: 100%;
+  border-radius: 100px;
+  background: rgba(156, 39, 176, 0.1);
+  margin-top: auto;
+}
+
+.shimmer-combo-button {
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* Course Pack Section */
+.shimmer-course-pack {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 48px 96px;
+}
+
+.shimmer-course-pack-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.shimmer-course-pack-card {
+  flex: 1;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f5f5f5;
+}
+
+.shimmer-course-pack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.shimmer-course-pack-title {
+  width: 60%;
+  height: 48px;
+}
+
+.shimmer-course-pack-tag {
+  width: 80px;
+  height: 32px;
+  border-radius: 100px;
+}
+
+.shimmer-course-pack-subtitle {
+  width: 70%;
+  height: 32px;
+}
+
+.shimmer-course-pack-banner {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.shimmer-course-pack-price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.shimmer-course-pack-current {
+  width: 120px;
+  height: 40px;
+}
+
+.shimmer-course-pack-original {
+  width: 80px;
+  height: 24px;
+}
+
+.shimmer-course-pack-discount {
+  width: 100px;
+  height: 24px;
+  margin-left: auto;
+}
+
+.shimmer-course-pack-button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+}
+
+/* Guaranteed Internship Section */
+.shimmer-guaranteed-internship {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.shimmer-guaranteed-title {
+  width: 400px;
+  height: 48px;
+}
+
+.shimmer-guaranteed-grid {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.shimmer-guaranteed-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-guaranteed-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(156, 39, 176, 0.1);
+}
+
+.shimmer-guaranteed-text {
+  width: 120px;
+  height: 24px;
+}
+
+/* Internship Tracks */
+.shimmer-internship-tracks {
+  width: 100%;
+  padding: 0 96px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.shimmer-tracks-grid {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.shimmer-track-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(156, 39, 176, 0.1);
+  cursor: pointer;
+}
+
+.shimmer-track-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-track-tag {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 120px;
+  height: 24px;
+  rotate: -45deg;
+  transform: translateX(-30%);
+  top: -10px;
+}
+
+.shimmer-track-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.shimmer-track-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.shimmer-track-title {
+  width: 80%;
+  height: 32px;
+}
+
+.shimmer-track-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.shimmer-track-rating,
+.shimmer-track-learners {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shimmer-rating-icon,
+.shimmer-learners-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.shimmer-rating-text,
+.shimmer-learners-text {
+  width: 60px;
+  height: 20px;
+}
+
+.shimmer-track-button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.shimmer-track-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.shimmer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(156, 39, 176, 0.2);
+}
+
+.shimmer-dot.active {
+  background: #9c27b0;
+}
+
+/* Learn For Free Section */
+.shimmer-learn-for-free {
+  width: 100%;
+  padding: 64px 96px;
+  background: #3b0047;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.shimmer-learn-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-learn-title {
+  width: 400px;
+  height: 48px;
+}
+
+.shimmer-learn-subtitle {
+  width: 300px;
+  height: 32px;
+}
+
+.shimmer-learn-content {
+  display: flex;
+  gap: 64px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.shimmer-learn-steps {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.shimmer-learn-step {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+}
+
+.shimmer-step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.shimmer-step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shimmer-step-title {
+  width: 120px;
+  height: 32px;
+}
+
+.shimmer-step-desc {
+  width: 100%;
+  height: 24px;
+}
+
+.shimmer-learn-duration {
+  width: 50%;
+}
+
+.shimmer-duration-card {
+  background: #9c27b0;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.shimmer-duration-title {
+  width: 80%;
+  height: 40px;
+}
+
+.shimmer-duration-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shimmer-duration-point {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shimmer-point-number {
+  width: 200px;
+  height: 32px;
+}
+
+.shimmer-point-text {
+  width: 100%;
+  height: 24px;
+}
+
+/* Why Refund Section */
+.shimmer-whyrefund {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.shimmer-whyrefund-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-whyrefund-title {
+  width: 300px;
+  height: 48px;
+}
+
+.shimmer-whyrefund-subtitle {
+  width: 800px;
+  height: 32px;
+}
+
+.shimmer-whyrefund-video {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 16/9;
+  border-radius: 24px;
+}
+
+/* Different Section */
+.shimmer-different {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.shimmer-different-header {
+  text-align: center;
+}
+
+.shimmer-different-title {
+  width: 600px;
+  height: 48px;
+}
+
+.shimmer-different-table {
+  width: 100%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.shimmer-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: #f9f5fa;
+  padding: 24px;
+}
+
+.shimmer-table-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.shimmer-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 24px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.shimmer-table-row:last-child {
+  border-bottom: none;
+}
+
+.shimmer-table-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.shimmer-table-col.features {
+  justify-content: flex-start;
+}
+
+.shimmer-table-logo {
+  width: 120px;
+  height: 40px;
+}
+
+.shimmer-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Video Review Section */
+.shimmer-video-review {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.shimmer-video-review-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-video-review-title {
+  width: 400px;
+  height: 48px;
+}
+
+.shimmer-video-review-subtitle {
+  width: 600px;
+  height: 32px;
+}
+
+.shimmer-video-review-grid {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.shimmer-video-review-card {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shimmer-video-thumbnail {
+  width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.shimmer-reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.shimmer-reviewer-name {
+  width: 140px;
+  height: 24px;
+}
+
+.shimmer-reviewer-title {
+  width: 100px;
+  height: 20px;
+}
+
+.shimmer-video-dots {
+  display: flex;
+  gap: 8px;
+}
+
+/* Testimonials Section */
+.shimmer-testimonials {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.shimmer-testimonials-header {
+  text-align: center;
+}
+
+.shimmer-testimonials-title {
+  max-width: 300px;
+  width: 100%;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.shimmer-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.shimmer-testimonial-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #f5f5f5;
+}
+
+.shimmer-testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.shimmer-testimonial-user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.shimmer-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.shimmer-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.shimmer-user-name {
+  max-width: 120px;
+  width: 100%;
+  height: 24px;
+}
+
+.shimmer-user-meta {
+  max-width: 80px;
+  width: 100%;
+  height: 20px;
+}
+
+.shimmer-testimonial-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  width: 100%;
+}
+
+.shimmer-rating {
+  max-width: 100px;
+  width: 100%;
+  height: 20px;
+}
+
+.shimmer-rating-date {
+  max-width: 80px;
+  width: 100%;
+  height: 16px;
+}
+
+.shimmer-testimonial-content {
+  width: 100%;
+  height: 120px;
+}
+
+.shimmer-testimonial-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.shimmer-action-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* FAQ Section */
+.shimmer-faq {
+  width: 100%;
+  padding: 64px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.shimmer-faq-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-faq-subtitle {
+  width: 200px;
+  height: 24px;
+}
+
+.shimmer-faq-title {
+  max-width: 400px;
+  width: 100%;
+  height: 48px;
+}
+
+.shimmer-faq-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.shimmer-faq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.shimmer-faq-section-title {
+  max-width: 300px;
+  width: 100%;
+  height: 32px;
+}
+
+.shimmer-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.shimmer-faq-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+}
+
+.shimmer-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.shimmer-question-text {
+  flex: 1;
+  height: 24px;
+}
+
+.shimmer-question-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Footer Section */
+.shimmer-footer {
+  width: 100%;
+  padding: 64px 96px 32px;
+  background: #f9f5fa;
+}
+
+.shimmer-footer-content {
+  display: flex;
+  gap: 64px;
+}
+
+.shimmer-footer-left {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shimmer-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shimmer-footer-link {
+  max-width: 120px;
+  height: 20px;
+  width: 100%;
+}
+
+.shimmer-footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.shimmer-social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.shimmer-footer-sections {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.shimmer-footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shimmer-section-title {
+  max-width: 160px;
+  width: 100%;
+  height: 24px;
+}
+
+.shimmer-section-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shimmer-section-link {
+  max-width: 140px;
+  width: 100%;
+  height: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .shimmer-navbar {
+    padding: 0 64px;
+  }
+
+  .shimmer-section {
+    padding: 64px 64px;
+  }
+
+  .compact-section {
+    padding: 28px 20px;
+  }
+
+  .shimmer-hero {
+    gap: 24px;
+  }
+
+  .shimmer-hero-bottom {
+    padding: 0 64px;
+  }
+
+  .shimmer-combo-card {
+    width: 280px;
+  }
+
+  .shimmer-course-pack {
+    padding: 40px 64px;
+  }
+
+  .shimmer-course-pack-card {
+    padding: 24px;
+  }
+
+  .shimmer-guaranteed-internship {
+    padding: 48px 64px;
+  }
+
+  .shimmer-guaranteed-grid {
+    gap: 32px;
+  }
+
+  .shimmer-internship-tracks {
+    padding: 0 64px 48px;
+  }
+
+  .shimmer-tracks-grid {
+    gap: 20px;
+  }
+
+  .shimmer-track-card {
+    padding: 20px;
+  }
+
+  .shimmer-learn-for-free {
+    padding: 48px 64px;
+  }
+
+  .shimmer-learn-content {
+    gap: 48px;
+  }
+
+  .shimmer-learn-duration {
+    width: 360px;
+  }
+
+  .shimmer-whyrefund {
+    padding: 48px 64px;
+  }
+
+  .shimmer-whyrefund-subtitle {
+    width: 600px;
+  }
+
+  .shimmer-different {
+    padding: 48px 64px;
+  }
+
+  .shimmer-different-title {
+    width: 500px;
+  }
+
+  .shimmer-video-review {
+    padding: 48px 64px;
+  }
+
+  .shimmer-video-review-grid {
+    gap: 20px;
+  }
+
+  .shimmer-video-review-card {
+    flex: 0 0 260px;
+  }
+
+  .shimmer-testimonials,
+  .shimmer-faq,
+  .shimmer-footer {
+    padding: 48px 64px 32px;
+  }
+
+  .shimmer-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shimmer-footer-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shimmer-navbar {
+    padding: 0 32px;
+    height: 70px;
+  }
+
+  .shimmer-section {
+    padding: 64px 32px;
+  }
+
+  .compact-section {
+    padding: 24px 16px;
+  }
+
+  .shimmer-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .shimmer-hero-right {
+    display: none;
+  }
+
+  .shimmer-hero-left-item2 {
+    height: 150px;
+  }
+
+  .shimmer-hero-bottom {
+    padding: 0 32px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 219px;
+    gap: 10px;
+  }
+
+  .shimmer-courses-subtitle {
+    width: 90%;
+  }
+
+  .shimmer-courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 0;
+  }
+
+  .shimmer-course-card {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .shimmer-combo-card {
+    width: 260px;
+    padding: 20px;
+    gap: 20px;
+    min-height: 380px;
+  }
+
+  .shimmer-combo-grid {
+    gap: 16px;
+  }
+
+  .shimmer-course-pack {
+    padding: 32px;
+  }
+
+  .shimmer-course-pack-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .shimmer-course-pack-card {
+    max-width: 100%;
+  }
+
+  .shimmer-course-pack-title {
+    height: 40px;
+  }
+  .shimmer-combo-title {
+    width: 100%;
+  }
+
+  .shimmer-guaranteed-internship {
+    padding: 40px 32px;
+  }
+
+  .shimmer-guaranteed-title {
+    width: 300px;
+  }
+
+  .shimmer-guaranteed-grid {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .shimmer-guaranteed-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .shimmer-internship-tracks {
+    padding: 0 32px 40px;
+  }
+
+  .shimmer-track-nav {
+    display: none;
+  }
+
+  .shimmer-track-card:not(:first-child) {
+    display: none;
+  }
+
+  .shimmer-learn-for-free {
+    padding: 40px 32px;
+  }
+
+  .shimmer-learn-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .shimmer-learn-steps,
+  .shimmer-learn-duration {
+    width: 100%;
+  }
+
+  .shimmer-learn-step {
+    padding: 24px;
+  }
+
+  .shimmer-whyrefund {
+    padding: 40px 32px;
+  }
+
+  .shimmer-whyrefund-subtitle {
+    width: 90%;
+  }
+
+  .shimmer-whyrefund-video {
+    border-radius: 16px;
+  }
+
+  .shimmer-different {
+    padding: 40px 32px;
+  }
+
+  .shimmer-different-title {
+    width: 400px;
+  }
+
+  .shimmer-table-header,
+  .shimmer-table-row {
+    padding: 20px;
+  }
+
+  .shimmer-video-review {
+    padding: 40px 32px;
+  }
+
+  .shimmer-video-review-title {
+    width: 300px;
+  }
+
+  .shimmer-video-review-subtitle {
+    width: 90%;
+  }
+
+  .shimmer-video-review-grid {
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 4px;
+    margin: 0 -32px;
+    padding: 0 32px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .shimmer-video-review-card {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+  }
+
+  .shimmer-play-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shimmer-testimonials,
+  .shimmer-faq {
+    padding: 40px 32px;
+  }
+  .shimmer-footer {
+    padding: 40px 32px 24px;
+  }
+  .shimmer-testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    margin: 0 -32px;
+    padding: 0 32px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .shimmer-testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shimmer-testimonial-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+  }
+
+  .shimmer-footer-sections {
+    gap: 32px;
+  }
+  .shimmer-footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-navbar {
+    padding: 0 16px;
+  }
+
+  .shimmer-navbar-left-item > img {
+    width: 120px;
+    height: 37px;
+  }
+
+  .shimmer-section {
+    padding: 48px 16px;
+  }
+
+  .compact-section {
+    padding: 20px 12px;
+  }
+
+  .shimmer-hero-left-item2 {
+    height: 100px;
+  }
+
+  .shimmer-hero-left-item4 {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .shimmer-hero-left-item4-item1,
+  .shimmer-hero-left-item4-item2 {
+    width: 100%;
+    max-width: 280px;
+    height: 64px;
+  }
+
+  .shimmer-hero-bottom {
+    padding: 0 16px;
+  }
+
+  .shimmer-courses-title {
+    width: 200px;
+  }
+
+  .shimmer-filter-pill {
+    width: 100px;
+  }
+
+  .shimmer-courses-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .shimmer-course-card {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .shimmer-courses {
+    gap: 30px;
+  }
+
+  .shimmer-courses-filters {
+    margin: 0;
+  }
+
+  .shimmer-combo-card {
+    width: 240px;
+    padding: 16px;
+    gap: 16px;
+    min-height: 340px;
+  }
+
+  .shimmer-combo-grid {
+    gap: 12px;
+    padding: 4px 2px;
+  }
+
+  .shimmer-combo-skills {
+    gap: 12px;
+  }
+
+  .shimmer-skill-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .shimmer-course-pack {
+    padding: 24px 16px;
+  }
+
+  .shimmer-course-pack-card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .shimmer-course-pack-title {
+    height: 32px;
+  }
+
+  .shimmer-course-pack-subtitle {
+    height: 24px;
+  }
+
+  .shimmer-course-pack-current {
+    width: 100px;
+    height: 32px;
+  }
+
+  .shimmer-course-pack-original,
+  .shimmer-course-pack-discount {
+    width: 70px;
+    height: 20px;
+  }
+
+  .shimmer-course-pack-button {
+    height: 40px;
+  }
+
+  .shimmer-guaranteed-internship {
+    padding: 32px 16px;
+  }
+
+  .shimmer-guaranteed-title {
+    width: 240px;
+  }
+
+  .shimmer-guaranteed-grid {
+    gap: 20px;
+  }
+
+  .shimmer-guaranteed-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shimmer-guaranteed-text {
+    width: 100px;
+    height: 20px;
+  }
+
+  .shimmer-internship-tracks {
+    padding: 0 16px 32px;
+  }
+
+  .shimmer-track-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .shimmer-track-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-track-button {
+    height: 40px;
+  }
+
+  .shimmer-learn-for-free {
+    padding: 32px 16px;
+  }
+
+  .shimmer-learn-title {
+    width: 280px;
+    height: 40px;
+  }
+
+  .shimmer-learn-subtitle {
+    width: 240px;
+    height: 24px;
+  }
+
+  .shimmer-learn-step {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .shimmer-step-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-duration-card {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .shimmer-whyrefund {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .shimmer-whyrefund-title {
+    width: 200px;
+    height: 40px;
+  }
+
+  .shimmer-whyrefund-subtitle {
+    height: 48px;
+  }
+
+  .shimmer-whyrefund-video {
+    border-radius: 12px;
+  }
+
+  .shimmer-different {
+    padding: 32px 16px;
+  }
+
+  .shimmer-different-title {
+    width: 280px;
+    height: 40px;
+  }
+
+  .shimmer-different-table {
+    border-radius: 16px;
+  }
+
+  .shimmer-table-header,
+  .shimmer-table-row {
+    padding: 16px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+  .shimmer-table-col {
+    padding: 0 8px;
+  }
+
+  .shimmer-table-logo {
+    width: 80px;
+    height: 32px;
+  }
+
+  .shimmer-check {
+    width: 20px;
+    height: 20px;
+  }
+
+  .shimmer-video-review {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .shimmer-video-review-title {
+    width: 240px;
+    height: 40px;
+  }
+
+  .shimmer-video-review-subtitle {
+    height: 48px;
+  }
+
+  .shimmer-video-review-grid {
+    margin: 0 -16px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .shimmer-video-review-card {
+    flex: 0 0 200px;
+  }
+
+  .shimmer-video-thumbnail {
+    border-radius: 16px;
+  }
+
+  .shimmer-play-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-testimonials,
+  .shimmer-faq {
+    padding: 32px 16px;
+  }
+
+  .shimmer-testimonial-card {
+    padding: 20px;
+  }
+
+  .shimmer-faq-item {
+    padding: 10px;
+  }
+
+  .shimmer-footer-sections {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .shimmer-footer-left {
+    flex: 0 0 auto;
+  }
+
+  .shimmer-testimonials-grid {
+    margin: 0 -16px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .shimmer-testimonial-card {
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 360px) {
+  .shimmer-courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shimmer-course-card {
+    aspect-ratio: 1.5;
+  }
+}
